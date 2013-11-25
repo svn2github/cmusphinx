@@ -835,7 +835,7 @@ s3_cfg_print_rule(s3_cfg_t *_cfg, s3_cfg_rule_t *_rule, FILE *_out)
     index = s3_cfg_id2index(_rule->products[i]);
     item = (s3_cfg_item_t *)s3_arraylist_get(&_cfg->item_info, index);
 
-    fprintf(_out, item->name);
+    fprintf(_out, "%s", item->name);
     if (i != len - 1)
       fprintf(_out, " ");
   }
@@ -876,7 +876,7 @@ s3_cfg_print_entry(s3_cfg_t *_cfg, s3_cfg_entry_t *_entry, FILE *_out)
     index = s3_cfg_id2index(rule->products[i]);
     item = (s3_cfg_item_t *)s3_arraylist_get(&_cfg->item_info, index);
 
-    fprintf(_out, item->name);
+    fprintf(_out, "%s", item->name);
     fprintf(_out, " ");
   }
 
