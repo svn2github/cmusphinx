@@ -129,7 +129,7 @@ ctlfile_next(FILE * fp, char *ctlspec, int32 * sf, int32 * ef, char *uttid)
 {
     char line[1024];
     int32 k;
-    char base[1024];
+    const char *base;
 
     *sf = 0;
     *ef = (int32) 0x7ffffff0;
@@ -148,7 +148,7 @@ ctlfile_next(FILE * fp, char *ctlspec, int32 * sf, int32 * ef, char *uttid)
 
     switch (k) {
     case 1:
-        path2basename(ctlspec, base);
+        base = path2basename(ctlspec);
         strcpy(uttid, base);
         break;
 
@@ -159,7 +159,7 @@ ctlfile_next(FILE * fp, char *ctlspec, int32 * sf, int32 * ef, char *uttid)
     case 3:
         if ((*sf >= *ef) || (*sf < 0))
             E_FATAL("Bad control file line: %s\n", line);
-        path2basename(ctlspec, base);
+        base = path2basename(ctlspec);
         sprintf(uttid, "%s_%d_%d", base, *sf, *ef);
         break;
 

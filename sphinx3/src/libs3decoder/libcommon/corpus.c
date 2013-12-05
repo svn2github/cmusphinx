@@ -402,7 +402,7 @@ ctl_read_entry(FILE * fp, char *uttfile, int32 * sf, int32 * ef,
                char *uttid)
 {
     char line[16384];
-    char base[16384];
+    const char *base;
     int32 k;
 
     do {
@@ -419,7 +419,7 @@ ctl_read_entry(FILE * fp, char *uttfile, int32 * sf, int32 * ef,
 
     if (k < 4) {
         /* Create utt-id from mfc-filename (and sf/ef if specified) */
-        path2basename(uttfile, base);
+        base = path2basename(uttfile);
         /* strip_fileext (base, uttid); */
         strcpy(uttid, base);
 
@@ -689,7 +689,7 @@ ctl_process_utt(const char *uttfile, int32 count,
 {
     char utterance_file[16384];
     char uttid[4096];
-    char base[16384];
+    const char *base;
     int32 i, c;
     int32 ts, newts;
     ptmr_t tm;
@@ -698,7 +698,7 @@ ctl_process_utt(const char *uttfile, int32 count,
 
     ptmr_init(&tm);
     ur = new_utt_res();
-    path2basename(uttfile, base);
+    base = path2basename(uttfile);
     /* strip_fileext() copies base to uttid. So, copying uttid to base
      *  is redundant if strip_fileext() is not called.
      */
