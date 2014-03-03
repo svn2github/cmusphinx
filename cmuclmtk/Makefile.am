@@ -98,3 +98,5 @@ EXTRA_DIST = perl/Smoothing.pm			\
 	debian/cmuclmtk.install			\
 	debian/rules				\
 	debian/copyright
+
+ACLOCAL_AMFLAGS = -I m4

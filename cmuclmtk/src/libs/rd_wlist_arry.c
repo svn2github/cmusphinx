@@ -41,13 +41,14 @@
 #include <stdio.h>
 #include <string.h>
 #include "general.h"
+#include "sih.h"
 #include "ac_parsetext.h"
 
 /* allocate an lagre enough array and read in a list of words (first word on each line)
    Leave entry no. 0 empty.
 */
 
-void read_wlist_into_array(char *wlist_filename, int verbosity,  char ***p_wlist, int *p_n_wlist)
+void read_wlist_into_array(char *wlist_filename, int verbosity,  char ***p_wlist, vocab_sz_t *p_n_wlist)
 {
   static char rname[]="read_wlist_into_array";
   FILE   *wlist_fp = rr_iopen(wlist_filename);
