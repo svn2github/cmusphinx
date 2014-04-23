@@ -76,7 +76,6 @@
  */
 #include <stdio.h>
 
-#include <sphinxbase/info.h>
 
 #include "s3_decode.h"
 #include "kb.h"
@@ -155,8 +154,6 @@ main(int _argc, char **_argv)
     char *ctrlfn;
     char *cfgfn;
     cmd_ln_t *config = NULL;
-
-    print_appl_info(_argv[0]);
 
     if (_argc != 4) {
         printf("\nUSAGE: %s <ctrlfile> <rawdir> <cfgfile>\n", _argv[0]);

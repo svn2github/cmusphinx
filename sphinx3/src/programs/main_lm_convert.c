@@ -80,7 +80,6 @@
 
 #include <string.h>
 
-#include <sphinxbase/info.h>
 #include <sphinxbase/cmd_ln.h>
 
 #include "lm.h"
@@ -144,7 +143,6 @@ main(int argc, char *argv[])
     char separator[2];
     cmd_ln_t *config;
 
-    print_appl_info(argv[0]);
     cmd_ln_appl_enter(argc, argv, "default.arg", arg);
 
     config = cmd_ln_get();

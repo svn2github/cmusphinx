@@ -90,9 +90,6 @@
 #include <math.h>
 #include <assert.h>
 
-#include <sphinxbase/info.h>
-#include <sphinxbase/unlimit.h>
-
 #include "lm.h"
 #include "fillpen.h"
 #include "dict.h"
@@ -341,10 +338,7 @@ confidence_utt(char *uttid, FILE * _confmatchsegfp)
 int
 main(int argc, char *argv[])
 {
-    print_appl_info(argv[0]);
     cmd_ln_appl_enter(argc, argv, "default.arg", defn);
-
-    unlimit();
 
     config = cmd_ln_get();
 

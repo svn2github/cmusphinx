@@ -68,8 +68,6 @@
 
 #include <math.h>
 
-#include <sphinxbase/info.h>
-#include <sphinxbase/unlimit.h>
 #include <sphinxbase/feat.h>
 
 #include "cont_mgau.h"
@@ -127,9 +125,7 @@ main(int32 argc, char *argv[])
     cmd_ln_t *config;
     logmath_t *logmath;
 
-    print_appl_info(argv[0]);
     cmd_ln_appl_enter(argc, argv, "default.arg", arg);
-    unlimit();
 
     config = cmd_ln_get();
 

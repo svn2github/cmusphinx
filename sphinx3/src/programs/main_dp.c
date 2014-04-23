@@ -66,7 +66,6 @@
 #include <assert.h>
 
 #include <sphinxbase/cmd_ln.h>
-#include <sphinxbase/info.h>
 #include <sphinxbase/hash_table.h>
 #include <sphinxbase/case.h>
 
@@ -588,8 +587,6 @@ main(int32 argc, char *argv[])
     FILE *rfp, *hfp;
     int32 oldfmt;
 
-
-    print_appl_info(argv[0]);
     cmd_ln_appl_enter(argc, argv, "default.arg", arg);
 
     config = cmd_ln_get();

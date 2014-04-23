@@ -47,9 +47,6 @@
 #include <sphinxbase/cmd_ln.h>
 #include <sphinxbase/agc.h>
 #include <sphinxbase/cmn.h>
-#include <sphinxbase/info.h>
-#include <sphinxbase/unlimit.h>
-
 
 #include <s3types.h>
 #include "logs3.h"
@@ -927,10 +924,8 @@ main(int32 argc, char *argv[])
     char sent[16384];
     cmd_ln_t *config;
 
-    print_appl_info(argv[0]);
     cmd_ln_appl_enter(argc, argv, "default.arg", defn);
 
-    unlimit();
     config = cmd_ln_get();
 
     ctloffset = cmd_ln_int32_r(config, "-ctloffset");

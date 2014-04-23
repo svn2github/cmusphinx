@@ -1,6 +1,5 @@
 
 #include <sphinxbase/cmd_ln.h>
-#include <sphinxbase/info.h>
 
 #include "s3_cfg.h"
 #include "fsg.h"
@@ -40,7 +39,6 @@ main(int _argc, char **_argv)
   int n_trans = 0;
   logmath_t *logmath;
 
-  print_appl_info(_argv[0]);
   if ((config = cmd_ln_parse_r(NULL, defn, _argc, _argv, TRUE)) == NULL)
     E_FATAL("Cannot parse command line\n");
 

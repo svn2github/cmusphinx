@@ -216,9 +216,6 @@
 #endif
 #include <assert.h>
 
-#include <sphinxbase/info.h>
-#include <sphinxbase/unlimit.h>
-
 #include <s3types.h>
 #include <logs3.h>
 #include <tmat.h>
@@ -452,10 +449,7 @@ main(int32 argc, char *argv[])
     /*  kb_t kb;
        ptmr_t tm; */
 
-    print_appl_info(argv[0]);
     cmd_ln_appl_enter(argc, argv, "default.arg", defn);
-    unlimit();
-
     config = cmd_ln_get();
 
     logmath = logs3_init(cmd_ln_float64_r(config, "-logbase"), 1,

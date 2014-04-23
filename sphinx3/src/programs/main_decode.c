@@ -59,8 +59,6 @@
 /** \file main_decode.c
  * \brief main function for application decode
  */
-#include <sphinxbase/info.h>
-#include <sphinxbase/unlimit.h>
 
 #include "utt.h"
 #include "kb.h"
@@ -149,10 +147,7 @@ main(int32 argc, char *argv[])
     stat_t *st;
     cmd_ln_t *config;
 
-    print_appl_info(argv[0]);
     cmd_ln_appl_enter(argc, argv, "default.arg", arg);
-
-    unlimit();
 
     config = cmd_ln_get();
     kb_init(&kb, config);

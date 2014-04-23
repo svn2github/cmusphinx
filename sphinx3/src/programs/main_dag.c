@@ -221,9 +221,6 @@
 #endif
 #include <assert.h>
 
-#include <sphinxbase/info.h>
-#include <sphinxbase/unlimit.h>
-
 #include "s3types.h"
 #include "dag.h"
 #include "logs3.h"
@@ -499,10 +496,7 @@ utt_dag(void *data, utt_res_t * ur, int32 sf, int32 ef, char *uttid)
 int
 main(int32 argc, char *argv[])
 {
-    print_appl_info(argv[0]);
     cmd_ln_appl_enter(argc, argv, "default.arg", defn);
-
-    unlimit();
 
     config = cmd_ln_get();
 
