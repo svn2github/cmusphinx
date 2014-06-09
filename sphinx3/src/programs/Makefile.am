@@ -1,6 +1,5 @@
 bin_PROGRAMS = sphinx3_decode \
         sphinx3_livepretend \
-        sphinx3_continuous \
         sphinx3_livedecode \
 	sphinx3_align \
 	sphinx3_astar \
@@ -13,7 +12,6 @@ bin_PROGRAMS = sphinx3_decode \
 	sphinx3_cfg2fsg
 
 sphinx3_livepretend_SOURCES = main_livepretend.c 
-sphinx3_continuous_SOURCES = main_continuous.c 
 sphinx3_livedecode_SOURCES = main_livedecode.c 
 sphinx3_decode_SOURCES = main_decode.c
 sphinx3_align_SOURCES = main_align.c s3_align.c
