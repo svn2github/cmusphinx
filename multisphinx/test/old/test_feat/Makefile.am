@@ -1,7 +1,7 @@
 check_PROGRAMS = test_feat test_feat_live test_feat_fe test_subvq
 noinst_HEADERS = test_macros.h
 
-INCLUDES = -I$(top_srcdir) \
+AM_CFLAGS =-I$(top_srcdir) \
 	-DTESTDATADIR=\"$(top_srcdir)/test/data\"
 
 

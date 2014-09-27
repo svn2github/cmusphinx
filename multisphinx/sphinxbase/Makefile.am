@@ -109,4 +109,4 @@ sbinclude_HEADERS = \
 	yin.h
 
 # Need this to avoid pulling in system includes by accident
-INCLUDES = -I$(top_srcdir)
+AM_CFLAGS =-I$(top_srcdir)

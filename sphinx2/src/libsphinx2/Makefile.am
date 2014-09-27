@@ -93,7 +93,7 @@ libsphinx2_la_SOURCES = \
 # hjf@cs.brown.edu - Added for Solaris build
 # LDADD = -L/usr/demo/SOUND/lib/ -laudio
 
-INCLUDES = -I$(top_srcdir)/src/libsphinx2/include \
+AM_CFLAGS =-I$(top_srcdir)/src/libsphinx2/include \
            -I$(top_srcdir)/include \
            -I$(top_builddir)/include 
 

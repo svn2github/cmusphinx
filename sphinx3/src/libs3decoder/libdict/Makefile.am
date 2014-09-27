@@ -13,7 +13,7 @@ libdict_la_SOURCES = \
 noinst_HEADERS = \
 	cmu6_lts_rules.h
 
-INCLUDES = -I$(top_srcdir)/include \
+AM_CFLAGS =-I$(top_srcdir)/include \
            -I$(top_builddir)/include 
 
 LIBOBJS = @LIBOBJS@

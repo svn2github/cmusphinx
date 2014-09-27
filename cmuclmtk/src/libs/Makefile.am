@@ -15,5 +15,5 @@ pkginclude_HEADERS =				\
 	pc_general.h				\
 	sih.h
 
-INCLUDES = -I${top_srcdir}/src/liblmest -I${top_srcdir}/src/win32
+AM_CFLAGS =-I${top_srcdir}/src/liblmest -I${top_srcdir}/src/win32
 

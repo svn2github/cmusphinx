@@ -7,7 +7,7 @@ libconfidence_la_LDFLAGS = -version-info 0:6:0
 libconfidence_la_SOURCES = \
 	confidence.c 
 
-INCLUDES = -I$(top_srcdir)/include \
+AM_CFLAGS =-I$(top_srcdir)/include \
            -I$(top_builddir)/include 
 
 LIBOBJS = @LIBOBJS@

@@ -1,6 +1,6 @@
 check_PROGRAMS = strtest test_atof
 
-INCLUDES =  -I$(top_srcdir) \
+AM_CFLAGS = -I$(top_srcdir) \
 	-DTESTDATADIR=\"$(srcdir)\"
 
 LDADD = ${top_builddir}/libmultisphinx.la

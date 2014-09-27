@@ -12,7 +12,7 @@ libcommon_la_SOURCES = \
 	stat.c \
 	vector.c 
 
-INCLUDES = -I$(top_srcdir)/include \
+AM_CFLAGS =-I$(top_srcdir)/include \
            -I$(top_builddir)/include 
 
 LIBOBJS = @LIBOBJS@

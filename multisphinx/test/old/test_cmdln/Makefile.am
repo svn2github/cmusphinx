@@ -1,6 +1,6 @@
 check_PROGRAMS = cmdln_parse cmdln_parse_multiple cmdln_parse_r
 
-INCLUDES =  -I$(top_srcdir)
+AM_CFLAGS = -I$(top_srcdir)
 
 LDADD = ${top_builddir}/libmultisphinx.la -lm
 

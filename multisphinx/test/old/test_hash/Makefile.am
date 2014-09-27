@@ -2,7 +2,7 @@ check_PROGRAMS = displayhash deletehash test_hash_iter
 
 noinst_HEADERS = test_macros.h
 
-INCLUDES = -I$(top_srcdir)
+AM_CFLAGS =-I$(top_srcdir)
 
 LDADD = ${top_builddir}/libmultisphinx.la
 

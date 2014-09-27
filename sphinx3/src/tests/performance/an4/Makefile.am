@@ -36,7 +36,7 @@
 # ====================================================================
 AUTOMAKE_OPTIONS = -Wno-portability
 
-INCLUDES = -I$(top_srcdir) \
+AM_CFLAGS =-I$(top_srcdir) \
 	-I$(top_srcdir)/src \
 	-I$(top_srcdir)/src/libs3decoder \
        -I$(top_srcdir)/src/libs3audio \

@@ -1,7 +1,7 @@
 check_PROGRAMS = chgCase
 
 
-INCLUDES = -I$(top_srcdir)
+AM_CFLAGS =-I$(top_srcdir)
 
 LDADD = ${top_builddir}/libmultisphinx.la -lm
 

@@ -5,7 +5,7 @@ check_PROGRAMS = \
 
 TESTS = $(check_PROGRAMS)
 
-INCLUDES = -I$(top_srcdir) \
+AM_CFLAGS =-I$(top_srcdir) \
 	-DTESTDATADIR=\"$(top_srcdir)/test/data\"
 
 LDADD = ${top_builddir}/libmultisphinx.la

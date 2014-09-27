@@ -38,7 +38,7 @@ libsearch_la_SOURCES = \
 noinst_HEADERS = \
 	srch_flat_fwd_internal.h
 
-INCLUDES = -I$(top_srcdir)/include \
+AM_CFLAGS =-I$(top_srcdir)/include \
            -I$(top_builddir)/include 
 
 LIBOBJS = @LIBOBJS@

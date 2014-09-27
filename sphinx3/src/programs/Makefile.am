@@ -33,5 +33,5 @@ LDADD = $(top_builddir)/src/libs3decoder/libs3decoder.la \
 sphinx3_livedecode_LDADD = $(top_builddir)/src/libs3decoder/libs3decoder.la \
 	-lsphinxbase -lsphinxad -lm -lpthread  @ad_libs@ 
 
-INCLUDES = -I$(top_srcdir)/include \
+AM_CFLAGS =-I$(top_srcdir)/include \
         -I$(top_builddir)/include

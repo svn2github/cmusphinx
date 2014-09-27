@@ -14,7 +14,7 @@ check_PROGRAMS = \
 
 TESTS = $(check_PROGRAMS)
 
-INCLUDES = \
+AM_CFLAGS =\
 	-I$(top_srcdir) \
 	-DTESTDATADIR=\"$(top_srcdir)/test/data\" \
 	-DMODELDIR=\"$(top_srcdir)/model\" \

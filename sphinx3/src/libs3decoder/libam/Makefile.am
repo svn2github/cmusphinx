@@ -25,7 +25,7 @@ libam_la_SOURCES = \
 	log_add.c \
 	s2_semi_mgau.c
 
-INCLUDES = -I$(top_srcdir) \
+AM_CFLAGS =-I$(top_srcdir) \
 	   -I$(top_srcdir)/include \
            -I$(top_builddir)/include 
 

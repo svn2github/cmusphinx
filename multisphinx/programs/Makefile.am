@@ -16,4 +16,4 @@ bin_SCRIPTS = \
 noinst_HEADERS = sphinx_wave2feat.h
 
 LDADD = $(top_builddir)/libmultisphinx.la
-INCLUDES = -I$(top_srcdir)
+AM_CFLAGS =-I$(top_srcdir)

@@ -27,4 +27,4 @@ pkginclude_HEADERS = \
 	toolkit.h
 
 
-INCLUDES = -I$(top_srcdir)/src/libs -I$(top_srcdir)/src/win32
+AM_CFLAGS =-I$(top_srcdir)/src/libs -I$(top_srcdir)/src/win32

@@ -61,7 +61,7 @@ LDADD = $(top_builddir)/src/libsphinx2/libsphinx2.la \
 # add these for solaris
 # -L/usr/demo/SOUND/lib/ -laudio -lnsl -lsocket
 
-INCLUDES = -I$(top_srcdir)/include \
+AM_CFLAGS =-I$(top_srcdir)/include \
        -I$(top_srcdir)/src/libsphinx2/include \
        -I$(top_srcdir)/src/examples \
        -I$(top_builddir)/include
