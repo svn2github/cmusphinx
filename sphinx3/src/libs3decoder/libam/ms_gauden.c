@@ -121,6 +121,10 @@
 
 #include "ms_gauden.h"
 
+#ifndef M_PI
+#define M_PI	3.1415926535897932385e0
+#endif
+
 #define GAUDEN_PARAM_VERSION	"1.0"
 
 static float64 min_density;     /* Density values, once converted to (int32)logs3 domain,

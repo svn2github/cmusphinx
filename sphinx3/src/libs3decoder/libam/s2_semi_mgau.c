@@ -61,6 +61,10 @@
 #include "s2_semi_mgau.h"
 #include "kdtree.h"
 
+#ifndef M_PI
+#define M_PI	3.1415926535897932385e0
+#endif
+
 #define MGAU_MIXW_VERSION	"1.0"   /* Sphinx-3 file format version for mixw */
 #define MGAU_PARAM_VERSION	"1.0"   /* Sphinx-3 file format version for mean/var */
 #define NONE		-1

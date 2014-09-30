@@ -129,6 +129,10 @@
 #include "logs3.h"
 #include "cont_mgau.h"
 
+#ifndef M_PI
+#define M_PI	3.1415926535897932385e0
+#endif
+
 
 #define MGAU_PARAM_VERSION	"1.0"   /* Sphinx-3 file format version for mean/var */
 #define MGAU_MIXW_VERSION	"1.0"   /* Sphinx-3 file format version for mixw */
