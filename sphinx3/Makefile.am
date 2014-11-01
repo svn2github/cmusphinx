@@ -107,3 +107,4 @@ perf-slow:
 #	@grep "FWDVIT" $@.out 
 #	@grep "FWDXCT" $@.out 
 
+ACLOCAL_AMFLAGS = -I m4

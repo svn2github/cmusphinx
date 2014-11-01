@@ -1,23 +1,14 @@
 dnl Welcome to the Sphinx-3 automated build system.
 dnl try not to hurt yourself ;)
 
-AC_INIT(configure.in)
+AC_INIT([sphinx3], [0.7])
 AM_INIT_AUTOMAKE(sphinx3,0.7)
+AM_INIT_AUTOMAKE([no-define foreign])
+AC_CONFIG_MACRO_DIR([m4])
 
 CFLAGS=${CFLAGS:--g -O2 -Wall}
 
 AC_CANONICAL_HOST
-
-dnl
-dnl Set proper compiler flags and such for some platforms
-dnl
-case $host in
-     *apple*)
-        LIBS="$LIBS -framework CoreAudio -framework AudioToolbox"
-        ;;
-     *)
-     ;;
-esac     
 
 AC_ISC_POSIX
 AC_PROG_CC
@@ -160,7 +151,7 @@ AC_SUBST(ad_backend)
 AC_SUBST(PERL)
 AC_SUBST(CSH)
 
-AC_PROG_LIBTOOL
+LT_INIT
 
 AC_OUTPUT([
 sphinx3.pc

@@ -7,7 +7,6 @@ CFLAGS=${CFLAGS:--g -O2 -Wall}
 
 AC_CANONICAL_HOST
 AC_PROG_CC
-AC_PROG_LIBTOOL
 AM_PROG_LEX
 AC_PROG_YACC
 AC_C_BIGENDIAN
@@ -19,6 +18,8 @@ AC_CHECK_LIB(m, log)
 AC_CHECK_HEADERS([errno.h pthread.h])
 AC_CHECK_LIB(pthread, pthread_create)
 AM_ICONV
+
+LT_INIT
 
 dnl
 dnl Check for pkgconfig
