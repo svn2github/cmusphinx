@@ -2,7 +2,6 @@ dnl Welcome to the Sphinx-3 automated build system.
 dnl try not to hurt yourself ;)
 
 AC_INIT([sphinx3], [0.7])
-AM_INIT_AUTOMAKE(sphinx3,0.7)
 AM_INIT_AUTOMAKE([no-define foreign])
 AC_CONFIG_MACRO_DIR([m4])
 
