@@ -82,7 +82,7 @@ utt_decode(void *data, utt_res_t * ur, int32 sf, int32 ef, char *uttid)
     /* Convert input file to cepstra if waveform input is selected */
     if (cmd_ln_boolean_r(config, "-adcin")) {
         int16 *adcdata;
-        int32 nsamps = 0;
+        size_t nsamps = 0;
 
         if ((adcdata = bio_read_wavfile(cmd_ln_str_r(config, "-cepdir"),
     				        ur->uttfile,
