@@ -1,4 +1,4 @@
-dnl Welcome to the Sphinx-3 automated build system.
+dnl Welcome to the Sphinx-3 automated build system. 
 dnl try not to hurt yourself ;)
 
 AC_INIT(sphinx3, 0.7)
