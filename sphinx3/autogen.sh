@@ -88,7 +88,7 @@ do
 	$LIBTOOLIZE --force --copy
       fi
       echo "Running aclocal $aclocalinclude ..."
-      aclocal -I m4 $aclocalinclude
+      aclocal $aclocalinclude
       if grep "^AC_CONFIG_HEADER" configure.in >/dev/null; then
 	echo "Running autoheader..."
 	autoheader

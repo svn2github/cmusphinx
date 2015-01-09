@@ -1,9 +1,8 @@
 dnl Welcome to the Sphinx-3 automated build system.
 dnl try not to hurt yourself ;)
 
-AC_INIT([sphinx3], [0.7])
+AC_INIT(sphinx3, 0.7)
 AM_INIT_AUTOMAKE([no-define foreign])
-AC_CONFIG_MACRO_DIR([m4])
 
 CFLAGS=${CFLAGS:--g -O2 -Wall}
 
@@ -21,6 +20,7 @@ AC_CHECK_FUNCS(memmove bcopy)
 
 AC_TYPE_SIGNAL
 
+LT_INIT
 
 dnl
 dnl Check whether visibility is supported
@@ -149,8 +149,6 @@ AC_SUBST(ad_libs)
 AC_SUBST(ad_backend)
 AC_SUBST(PERL)
 AC_SUBST(CSH)
-
-LT_INIT
 
 AC_OUTPUT([
 sphinx3.pc
